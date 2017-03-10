@@ -1,0 +1,24 @@
+{
+  "name": "hrsf70-mvp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/impersin/hrsf70-mvp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/impersin/hrsf70-mvp/issues"
+  },
+  "homepage": "https://github.com/impersin/hrsf70-mvp#readme",
+  "dependencies": {
+    "angular-youtube-api-factory": "^0.6.2",
+    "mysql": "^2.13.0"
+  }
+}

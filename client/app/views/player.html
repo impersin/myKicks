@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html ng-app="mvpApp">
+    <head>
+      <link rel="stylesheet" type="text/css" href="../style.css">
+      <script src="../bower_components/jquery/dist/jquery.js"></script>
+      <title>{{ player }}</title>
+    </head>
+  <body>
+  
+    <div class = "header">
+      <img ng-src="{{header}}" height="400px" />
+    </div>
+    
+    <div class='nav'>
+      <ul id="navul">
+        <li><a href="/#/" id="home">Home </a></li>
+        <li><a href="/#/kobe" id="home">Kobe </a></li>
+        <li><a href="/#/jordan" id="home">Jodan </a></li>
+        <li><a href="/#/lebron" id="home">Lebron </a></li>
+        <li><a href="/#/curry" id="home">Curry</a></li>
+    </ul>
+   </div> 
+    
+    <h1>{{ player }} Collection</h1>
+    <label>Search: <input ng-model="searchInput" placeholder="Model" id="searchbar"></label>
+    
+    <div class="gallery" ng-repeat="image in images | filter:searchInput">
+      <img class="shoe" ng-src="{{image.url}}" alt="{{images.name[0]}}" width="500px" height="300" /><br/>
+      <span id="shoe">
+        {{image.name[0]}}<img id="like" src="/../images/covers/like.png"/></a>
+      </span>
+    </div>
+    
+    
+    <form class="form">
+      <h4 id="formhead">How do you like my shoes?</br>Leave your comment</h4>
+      <p>
+        <input type="text" placeholder="User Name" ng-model="user">
+      </p>
+      
+      <p>
+        <textarea placeholder="Comments" ng-model="text"></textarea>
+      </p>
+        
+        <button ng-click="addComment()">Submit</button>
+    </form>
+
+  <div class='board'>
+    <h4>Comments</h4>
+    <div class="commentbox" ng-repeat="comment in comments">
+    <p class="row"><span id="text">{{ comment.username }} : {{comment.comment}}</span></p>
+    </div>
+  </div>
+
+</body>
+</html>
